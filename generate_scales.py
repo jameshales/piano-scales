@@ -2,6 +2,8 @@ from musthe import *
 import piano_fingering
 import svgwrite
 
+# Piano key dimensions taken from: <https://upload.wikimedia.org/wikipedia/commons/1/15/PianoKeyboard.svg>
+# See also: <http://www.mathpages.com/home/kmath043.htm>
 WHITE_KEY_WIDTH=23
 WHITE_KEY_HEIGHT=120
 WHITE_KEY_INDICES={number: Letter.letters_idx[letter] for letter, number in Letter.letters_number.items()}
