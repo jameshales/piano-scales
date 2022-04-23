@@ -89,6 +89,7 @@ ROOTS=[
     "B4",
 ]
 
+# Piano fingering taken from chart at: <http://robertkelleyphd.com/home/teaching/keyboard/keyboard-scale-fingering-chart/>
 SCALES={
     "C4": {
         "major": (
