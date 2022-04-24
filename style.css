@@ -1,0 +1,28 @@
+.scale .contents {
+  width: 30em;
+  margin: auto;
+  background: whitesmoke;
+  padding: 1em;
+  border: 1px solid lightgrey;
+  border-radius: 1em;
+}
+
+.scale .notes {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.scale .notes > div {
+  background: white;
+  display: inline-block;
+  border-radius: 0.5em;
+  padding: 0 0.5em;
+}
+
+.scale .keyboard {
+  width: 100%;
+}
+
+h2, h3 {
+  border-bottom: 1px solid lightgrey;
+}

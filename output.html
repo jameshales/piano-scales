@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Piano Scales</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Piano Scales</h1>
+      </header>
+      <nav>
+        <ul class="nav nav-pills">
+          <li class="dropdown" role="presentation">
+            <a data-target="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle" role="button">Major <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#c-natural-4-major">C Major</a>
+              </li>
+              <li>
+                <a href="#c-sharp-4-major">C♯ Major</a>
+              </li>
+              <li>
+                <a href="#d-flat-4-major">D♭ Major</a>
+              </li>
+              <li>
+                <a href="#d-natural-4-major">D Major</a>
+              </li>
+              <li>
+                <a href="#d-sharp-4-major">D♯ Major</a>
+              </li>
+              <li>
+                <a href="#e-flat-4-major">E♭ Major</a>
+              </li>
+              <li>
+                <a href="#e-natural-4-major">E Major</a>
+              </li>
+              <li>
+                <a href="#f-natural-4-major">F Major</a>
+              </li>
+              <li>
+                <a href="#f-sharp-4-major">F♯ Major</a>
+              </li>
+              <li>
+                <a href="#g-flat-4-major">G♭ Major</a>
+              </li>
+              <li>
+                <a href="#g-natural-4-major">G Major</a>
+              </li>
+              <li>
+                <a href="#g-sharp-4-major">G♯ Major</a>
+              </li>
+              <li>
+                <a href="#a-flat-4-major">A♭ Major</a>
+              </li>
+              <li>
+                <a href="#a-natural-4-major">A Major</a>
+              </li>
+              <li>
+                <a href="#a-sharp-4-major">A♯ Major</a>
+              </li>
+              <li>
+                <a href="#b-flat-4-major">B♭ Major</a>
+              </li>
+              <li>
+                <a href="#b-natural-4-major">B Major</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown" role="presentation">
+            <a data-target="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle" role="button">Minor <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#c-natural-4-minor">C Minor</a>
+              </li>
+              <li>
+                <a href="#c-sharp-4-minor">C♯ Minor</a>
+              </li>
+              <li>
+                <a href="#d-flat-4-minor">D♭ Minor</a>
+              </li>
+              <li>
+                <a href="#d-natural-4-minor">D Minor</a>
+              </li>
+              <li>
+                <a href="#d-sharp-4-minor">D♯ Minor</a>
+              </li>
+              <li>
+                <a href="#e-flat-4-minor">E♭ Minor</a>
+              </li>
+              <li>
+                <a href="#e-natural-4-minor">E Minor</a>
+              </li>
+              <li>
+                <a href="#f-natural-4-minor">F Minor</a>
+              </li>
+              <li>
+                <a href="#f-sharp-4-minor">F♯ Minor</a>
+              </li>
+              <li>
+                <a href="#g-flat-4-minor">G♭ Minor</a>
+              </li>
+              <li>
+                <a href="#g-natural-4-minor">G Minor</a>
+              </li>
+              <li>
+                <a href="#g-sharp-4-minor">G♯ Minor</a>
+              </li>
+              <li>
+                <a href="#a-flat-4-minor">A♭ Minor</a>
+              </li>
+              <li>
+                <a href="#a-natural-4-minor">A Minor</a>
+              </li>
+              <li>
+                <a href="#a-sharp-4-minor">A♯ Minor</a>
+              </li>
+              <li>
+                <a href="#b-flat-4-minor">B♭ Minor</a>
+              </li>
+              <li>
+                <a href="#b-natural-4-minor">B Minor</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown" role="presentation">
+            <a data-target="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle" role="button">Harmonic Minor <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#c-natural-4-harmonic-minor">C Harmonic Minor</a>
+              </li>
+              <li>
+                <a href="#c-sharp-4-harmonic-minor">C♯ Harmonic Minor</a>
+              </li>
+              <li>
+                <a href="#d-flat-4-harmonic-minor">D♭ Harmonic Minor</a>
+              </li>
+              <li>
+                <a href="#d-natural-4-harmonic-minor">D Harmonic Minor</a>
+              </li>
+              <li>
+                <a href="#d-sharp-4-harmonic-minor">D♯ Harmonic Minor</a>
+              </li>
+              <li>
+                <a href="#e-flat-4-harmonic-minor">E♭ Harmonic Minor</a>
+              </li>
+              <li>
+                <a href="#e-natural-4-harmonic-minor">E Harmonic Minor</a>
+              </li>
+              <li>
+                <a href="#f-natural-4-harmonic-minor">F Harmonic Minor</a>
+              </li>
+              <li>
+                <a href="#f-sharp-4-harmonic-minor">F♯ Harmonic Minor</a>
+              </li>
+              <li>
+                <a href="#g-flat-4-harmonic-minor">G♭ Harmonic Minor</a>
+              </li>
+              <li>
+                <a href="#g-natural-4-harmonic-minor">G Harmonic Minor</a>
+              </li>
+              <li>
+                <a href="#g-sharp-4-harmonic-minor">G♯ Harmonic Minor</a>
+              </li>
+              <li>
+                <a href="#a-flat-4-harmonic-minor">A♭ Harmonic Minor</a>
+              </li>
+              <li>
+                <a href="#a-natural-4-harmonic-minor">A Harmonic Minor</a>
+              </li>
+              <li>
+                <a href="#a-sharp-4-harmonic-minor">A♯ Harmonic Minor</a>
+              </li>
+              <li>
+                <a href="#b-flat-4-harmonic-minor">B♭ Harmonic Minor</a>
+              </li>
+              <li>
+                <a href="#b-natural-4-harmonic-minor">B Harmonic Minor</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown" role="presentation">
+            <a data-target="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle" role="button">Melodic Minor <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#c-natural-4-melodic-minor">C Melodic Minor</a>
+              </li>
+              <li>
+                <a href="#c-sharp-4-melodic-minor">C♯ Melodic Minor</a>
+              </li>
+              <li>
+                <a href="#d-flat-4-melodic-minor">D♭ Melodic Minor</a>
+              </li>
+              <li>
+                <a href="#d-natural-4-melodic-minor">D Melodic Minor</a>
+              </li>
+              <li>
+                <a href="#d-sharp-4-melodic-minor">D♯ Melodic Minor</a>
+              </li>
+              <li>
+                <a href="#e-flat-4-melodic-minor">E♭ Melodic Minor</a>
+              </li>
+              <li>
+                <a href="#e-natural-4-melodic-minor">E Melodic Minor</a>
+              </li>
+              <li>
+                <a href="#f-natural-4-melodic-minor">F Melodic Minor</a>
+              </li>
+              <li>
+                <a href="#f-sharp-4-melodic-minor">F♯ Melodic Minor</a>
+              </li>
+              <li>
+                <a href="#g-flat-4-melodic-minor">G♭ Melodic Minor</a>
+              </li>
+              <li>
+                <a href="#g-natural-4-melodic-minor">G Melodic Minor</a>
+              </li>
+              <li>
+                <a href="#g-sharp-4-melodic-minor">G♯ Melodic Minor</a>
+              </li>
+              <li>
+                <a href="#a-flat-4-melodic-minor">A♭ Melodic Minor</a>
+              </li>
+              <li>
+                <a href="#a-natural-4-melodic-minor">A Melodic Minor</a>
+              </li>
+              <li>
+                <a href="#a-sharp-4-melodic-minor">A♯ Melodic Minor</a>
+              </li>
+              <li>
+                <a href="#b-flat-4-melodic-minor">B♭ Melodic Minor</a>
+              </li>
+              <li>
+                <a href="#b-natural-4-melodic-minor">B Melodic Minor</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <section id="major">
+        <h2>Major</h2>
+        <section class="scale" id="c-natural-4-major">
+          <h3>C Major</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/major/C4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="c-sharp-4-major">
+          <h3>C♯ Major</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/major/C%234.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">C♯</span>
+                <span class="separator"> • </span>
+                <span class="note">D♯</span>
+                <span class="separator"> • </span>
+                <span class="note">E♯</span>
+                <span class="separator"> • </span>
+                <span class="note">F♯</span>
+                <span class="separator"> • </span>
+                <span class="note">G♯</span>
+                <span class="separator"> • </span>
+                <span class="note">A♯</span>
+                <span class="separator"> • </span>
+                <span class="note">B♯</span>
+                <span class="separator"> • </span>
+                <span class="note">C♯</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="d-natural-4-major">
+          <h3>D Major</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/major/D4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F♯</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B</span>
+                <span class="separator"> • </span>
+                <span class="note">C♯</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="e-flat-4-major">
+          <h3>E♭ Major</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/major/Eb4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">E♭</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A♭</span>
+                <span class="separator"> • </span>
+                <span class="note">B♭</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E♭</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="e-natural-4-major">
+          <h3>E Major</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/major/E4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F♯</span>
+                <span class="separator"> • </span>
+                <span class="note">G♯</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B</span>
+                <span class="separator"> • </span>
+                <span class="note">C♯</span>
+                <span class="separator"> • </span>
+                <span class="note">D♯</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="f-natural-4-major">
+          <h3>F Major</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/major/F4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B♭</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="f-sharp-4-major">
+          <h3>F♯ Major</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/major/F%234.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">F♯</span>
+                <span class="separator"> • </span>
+                <span class="note">G♯</span>
+                <span class="separator"> • </span>
+                <span class="note">A♯</span>
+                <span class="separator"> • </span>
+                <span class="note">B</span>
+                <span class="separator"> • </span>
+                <span class="note">C♯</span>
+                <span class="separator"> • </span>
+                <span class="note">D♯</span>
+                <span class="separator"> • </span>
+                <span class="note">E♯</span>
+                <span class="separator"> • </span>
+                <span class="note">F♯</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="g-natural-4-major">
+          <h3>G Major</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/major/G4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F♯</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="a-flat-4-major">
+          <h3>A♭ Major</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/major/Ab4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">A♭</span>
+                <span class="separator"> • </span>
+                <span class="note">B♭</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D♭</span>
+                <span class="separator"> • </span>
+                <span class="note">E♭</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A♭</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="a-natural-4-major">
+          <h3>A Major</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/major/A4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B</span>
+                <span class="separator"> • </span>
+                <span class="note">C♯</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F♯</span>
+                <span class="separator"> • </span>
+                <span class="note">G♯</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="b-flat-4-major">
+          <h3>B♭ Major</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/major/Bb4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">B♭</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E♭</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B♭</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="b-natural-4-major">
+          <h3>B Major</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/major/B4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">B</span>
+                <span class="separator"> • </span>
+                <span class="note">C♯</span>
+                <span class="separator"> • </span>
+                <span class="note">D♯</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F♯</span>
+                <span class="separator"> • </span>
+                <span class="note">G♯</span>
+                <span class="separator"> • </span>
+                <span class="note">A♯</span>
+                <span class="separator"> • </span>
+                <span class="note">B</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section id="minor">
+        <h2>Minor</h2>
+        <section class="scale" id="c-natural-4-minor">
+          <h3>C Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/natural_minor/C4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E♭</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A♭</span>
+                <span class="separator"> • </span>
+                <span class="note">B♭</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="c-sharp-4-minor">
+          <h3>C♯ Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/natural_minor/C%234.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">C♯</span>
+                <span class="separator"> • </span>
+                <span class="note">D♯</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F♯</span>
+                <span class="separator"> • </span>
+                <span class="note">G♯</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B</span>
+                <span class="separator"> • </span>
+                <span class="note">C♯</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="d-natural-4-minor">
+          <h3>D Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/natural_minor/D4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B♭</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="e-flat-4-minor">
+          <h3>E♭ Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/natural_minor/Eb4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">E♭</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G♭</span>
+                <span class="separator"> • </span>
+                <span class="note">A♭</span>
+                <span class="separator"> • </span>
+                <span class="note">B♭</span>
+                <span class="separator"> • </span>
+                <span class="note">C♭</span>
+                <span class="separator"> • </span>
+                <span class="note">D♭</span>
+                <span class="separator"> • </span>
+                <span class="note">E♭</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="e-natural-4-minor">
+          <h3>E Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/natural_minor/E4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F♯</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="f-natural-4-minor">
+          <h3>F Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/natural_minor/F4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A♭</span>
+                <span class="separator"> • </span>
+                <span class="note">B♭</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D♭</span>
+                <span class="separator"> • </span>
+                <span class="note">E♭</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="f-sharp-4-minor">
+          <h3>F♯ Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/natural_minor/F%234.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">F♯</span>
+                <span class="separator"> • </span>
+                <span class="note">G♯</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B</span>
+                <span class="separator"> • </span>
+                <span class="note">C♯</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F♯</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="g-natural-4-minor">
+          <h3>G Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/natural_minor/G4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B♭</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E♭</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="a-flat-4-minor">
+          <h3>A♭ Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/natural_minor/Ab4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">A♭</span>
+                <span class="separator"> • </span>
+                <span class="note">B♭</span>
+                <span class="separator"> • </span>
+                <span class="note">C♭</span>
+                <span class="separator"> • </span>
+                <span class="note">D♭</span>
+                <span class="separator"> • </span>
+                <span class="note">E♭</span>
+                <span class="separator"> • </span>
+                <span class="note">F♭</span>
+                <span class="separator"> • </span>
+                <span class="note">G♭</span>
+                <span class="separator"> • </span>
+                <span class="note">A♭</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="a-natural-4-minor">
+          <h3>A Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/natural_minor/A4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="b-flat-4-minor">
+          <h3>B♭ Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/natural_minor/Bb4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">B♭</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D♭</span>
+                <span class="separator"> • </span>
+                <span class="note">E♭</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G♭</span>
+                <span class="separator"> • </span>
+                <span class="note">A♭</span>
+                <span class="separator"> • </span>
+                <span class="note">B♭</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="b-natural-4-minor">
+          <h3>B Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/natural_minor/B4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">B</span>
+                <span class="separator"> • </span>
+                <span class="note">C♯</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F♯</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section id="harmonic-minor">
+        <h2>Harmonic Minor</h2>
+        <section class="scale" id="c-natural-4-harmonic-minor">
+          <h3>C Harmonic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/harmonic_minor/C4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E♭</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A♭</span>
+                <span class="separator"> • </span>
+                <span class="note">B</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="c-sharp-4-harmonic-minor">
+          <h3>C♯ Harmonic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/harmonic_minor/C%234.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">C♯</span>
+                <span class="separator"> • </span>
+                <span class="note">D♯</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F♯</span>
+                <span class="separator"> • </span>
+                <span class="note">G♯</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B♯</span>
+                <span class="separator"> • </span>
+                <span class="note">C♯</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="d-natural-4-harmonic-minor">
+          <h3>D Harmonic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/harmonic_minor/D4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B♭</span>
+                <span class="separator"> • </span>
+                <span class="note">C♯</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="e-flat-4-harmonic-minor">
+          <h3>E♭ Harmonic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/harmonic_minor/Eb4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">E♭</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G♭</span>
+                <span class="separator"> • </span>
+                <span class="note">A♭</span>
+                <span class="separator"> • </span>
+                <span class="note">B♭</span>
+                <span class="separator"> • </span>
+                <span class="note">C♭</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E♭</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="e-natural-4-harmonic-minor">
+          <h3>E Harmonic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/harmonic_minor/E4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F♯</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D♯</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="f-natural-4-harmonic-minor">
+          <h3>F Harmonic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/harmonic_minor/F4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A♭</span>
+                <span class="separator"> • </span>
+                <span class="note">B♭</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D♭</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="f-sharp-4-harmonic-minor">
+          <h3>F♯ Harmonic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/harmonic_minor/F%234.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">F♯</span>
+                <span class="separator"> • </span>
+                <span class="note">G♯</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B</span>
+                <span class="separator"> • </span>
+                <span class="note">C♯</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E♯</span>
+                <span class="separator"> • </span>
+                <span class="note">F♯</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="g-natural-4-harmonic-minor">
+          <h3>G Harmonic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/harmonic_minor/G4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B♭</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E♭</span>
+                <span class="separator"> • </span>
+                <span class="note">F♯</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="a-flat-4-harmonic-minor">
+          <h3>A♭ Harmonic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/harmonic_minor/Ab4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">A♭</span>
+                <span class="separator"> • </span>
+                <span class="note">B♭</span>
+                <span class="separator"> • </span>
+                <span class="note">C♭</span>
+                <span class="separator"> • </span>
+                <span class="note">D♭</span>
+                <span class="separator"> • </span>
+                <span class="note">E♭</span>
+                <span class="separator"> • </span>
+                <span class="note">F♭</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A♭</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="a-natural-4-harmonic-minor">
+          <h3>A Harmonic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/harmonic_minor/A4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G♯</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="b-flat-4-harmonic-minor">
+          <h3>B♭ Harmonic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/harmonic_minor/Bb4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">B♭</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D♭</span>
+                <span class="separator"> • </span>
+                <span class="note">E♭</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G♭</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B♭</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="b-natural-4-harmonic-minor">
+          <h3>B Harmonic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/harmonic_minor/B4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">B</span>
+                <span class="separator"> • </span>
+                <span class="note">C♯</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F♯</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A♯</span>
+                <span class="separator"> • </span>
+                <span class="note">B</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section id="melodic-minor">
+        <h2>Melodic Minor</h2>
+        <section class="scale" id="c-natural-4-melodic-minor">
+          <h3>C Melodic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/melodic_minor/C4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E♭</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="c-sharp-4-melodic-minor">
+          <h3>C♯ Melodic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/melodic_minor/C%234.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">C♯</span>
+                <span class="separator"> • </span>
+                <span class="note">D♯</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F♯</span>
+                <span class="separator"> • </span>
+                <span class="note">G♯</span>
+                <span class="separator"> • </span>
+                <span class="note">A♯</span>
+                <span class="separator"> • </span>
+                <span class="note">B♯</span>
+                <span class="separator"> • </span>
+                <span class="note">C♯</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="d-natural-4-melodic-minor">
+          <h3>D Melodic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/melodic_minor/D4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B</span>
+                <span class="separator"> • </span>
+                <span class="note">C♯</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="e-flat-4-melodic-minor">
+          <h3>E♭ Melodic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/melodic_minor/Eb4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">E♭</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G♭</span>
+                <span class="separator"> • </span>
+                <span class="note">A♭</span>
+                <span class="separator"> • </span>
+                <span class="note">B♭</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E♭</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="e-natural-4-melodic-minor">
+          <h3>E Melodic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/melodic_minor/E4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F♯</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B</span>
+                <span class="separator"> • </span>
+                <span class="note">C♯</span>
+                <span class="separator"> • </span>
+                <span class="note">D♯</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="f-natural-4-melodic-minor">
+          <h3>F Melodic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/melodic_minor/F4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A♭</span>
+                <span class="separator"> • </span>
+                <span class="note">B♭</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="f-sharp-4-melodic-minor">
+          <h3>F♯ Melodic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/melodic_minor/F%234.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">F♯</span>
+                <span class="separator"> • </span>
+                <span class="note">G♯</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B</span>
+                <span class="separator"> • </span>
+                <span class="note">C♯</span>
+                <span class="separator"> • </span>
+                <span class="note">D♯</span>
+                <span class="separator"> • </span>
+                <span class="note">E♯</span>
+                <span class="separator"> • </span>
+                <span class="note">F♯</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="g-natural-4-melodic-minor">
+          <h3>G Melodic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/melodic_minor/G4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B♭</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F♯</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="a-flat-4-melodic-minor">
+          <h3>A♭ Melodic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/melodic_minor/Ab4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">A♭</span>
+                <span class="separator"> • </span>
+                <span class="note">B♭</span>
+                <span class="separator"> • </span>
+                <span class="note">C♭</span>
+                <span class="separator"> • </span>
+                <span class="note">D♭</span>
+                <span class="separator"> • </span>
+                <span class="note">E♭</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A♭</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="a-natural-4-melodic-minor">
+          <h3>A Melodic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/melodic_minor/A4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F♯</span>
+                <span class="separator"> • </span>
+                <span class="note">G♯</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="b-flat-4-melodic-minor">
+          <h3>B♭ Melodic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/melodic_minor/Bb4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">B♭</span>
+                <span class="separator"> • </span>
+                <span class="note">C</span>
+                <span class="separator"> • </span>
+                <span class="note">D♭</span>
+                <span class="separator"> • </span>
+                <span class="note">E♭</span>
+                <span class="separator"> • </span>
+                <span class="note">F</span>
+                <span class="separator"> • </span>
+                <span class="note">G</span>
+                <span class="separator"> • </span>
+                <span class="note">A</span>
+                <span class="separator"> • </span>
+                <span class="note">B♭</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="scale" id="b-natural-4-melodic-minor">
+          <h3>B Melodic Minor</h3>
+          <div class="contents">
+            <img class="keyboard" src="output/melodic_minor/B4.svg" />
+            <div class="notes">
+              <div>
+                <span class="note">B</span>
+                <span class="separator"> • </span>
+                <span class="note">C♯</span>
+                <span class="separator"> • </span>
+                <span class="note">D</span>
+                <span class="separator"> • </span>
+                <span class="note">E</span>
+                <span class="separator"> • </span>
+                <span class="note">F♯</span>
+                <span class="separator"> • </span>
+                <span class="note">G♯</span>
+                <span class="separator"> • </span>
+                <span class="note">A♯</span>
+                <span class="separator"> • </span>
+                <span class="note">B</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+  </body>
+</html>

@@ -27,4 +27,4 @@ pip install -r requirements.txt
 python generate_scales.py
 ```
 
-Output is written to `output.svg`.
+Output is written to `output.html`.

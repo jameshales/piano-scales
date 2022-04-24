@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg baseProfile="full" height="120" version="1.1" width="322" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css"><![CDATA[
+.key {
+    stroke-width: 1.5px;
+}
+
+.white.key .box {
+    fill: white;
+    stroke: black;
+}
+
+.white.key .label {
+    fill: black;
+    font-size: 15px;
+}
+
+.black.key .box {
+    fill: black;
+    stroke: black;
+}
+
+.black.key .label {
+    fill: white;
+    font-size: 15px;
+}
+
+.key.selected .box {
+    fill: #FEC47F;
+}
+
+.label {
+    font-family: "Helvetica", "Nimbus Sans", sans-serif;
+    font-weight: bold;
+    text-anchor: middle;
+}
+
+.key .label.lower {
+    fill: black;
+    dominant-baseline: text-before-edge;
+}
+
+.key .label.upper {
+    fill: white;
+    dominant-baseline: text-after-edge;
+}
+
+text.notes {
+    font-family: "Helvetica", "Nimbus Sans", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-anchor: middle;
+    dominant-baseline: text-before-edge;
+    transform: translate(0, 5px);
+}
+]]></style></defs></svg>

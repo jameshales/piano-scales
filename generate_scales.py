@@ -1,6 +1,9 @@
 from musthe import *
+from yattag import Doc, indent
 import piano_fingering
 import svgwrite
+import os
+import urllib.parse
 
 # Piano key dimensions taken from: <https://upload.wikimedia.org/wikipedia/commons/1/15/PianoKeyboard.svg>
 # See also: <http://www.mathpages.com/home/kmath043.htm>
@@ -74,20 +77,17 @@ MODES=[
     "melodic_minor",
 ]
 
-ROOTS=[
-    "C4",
-    "C#4",
-    "D4",
-    "Eb4",
-    "E4",
-    "F4",
-    "F#4",
-    "G4",
-    "Ab4",
-    "A4",
-    "Bb4",
-    "B4",
-]
+ROOTS=list(map(lambda n: n.scientific_notation(), Note.all()))
+
+ROOT_ENHARMONIC_EQUIVALENTS={
+    "A#4": "Bb4",
+    "B#4": "C4",
+    "Cb4": "B4",
+    "D#4": "Eb4",
+    "Db4": "C#4",
+    "G#4": "Ab4",
+    "Gb4": "F#4",
+}
 
 # Piano fingering taken from chart at: <http://robertkelleyphd.com/home/teaching/keyboard/keyboard-scale-fingering-chart/>
 SCALES={
@@ -324,6 +324,41 @@ def is_white_key(note):
 def pretty_print_note(note):
     return str(note).replace("b", "♭").replace("#", "♯")
 
+def pretty_print_mode(mode):
+    modes = {
+        "major": "Major",
+        "natural_minor": "Minor",
+        "harmonic_minor": "Harmonic Minor",
+        "melodic_minor": "Melodic Minor"
+    }
+    return modes[mode]
+
+def pretty_print_scale(scale):
+    return f"{pretty_print_note(scale.root)} {pretty_print_mode(scale.name)}"
+
+def slug_accidental(accidental):
+    if len(accidental) == 0:
+        return "natural"
+    elif accidental[0] == "b":
+        return "-".join(len(accidental) * ["flat"])
+    elif accidental[0] == "#":
+        return "-".join(len(accidental) * ["sharp"])
+
+def slug_note(note):
+    return f"{note.letter.name.lower()}-{slug_accidental(note.accidental)}-{note.octave}"
+
+def slug_mode(mode):
+    modes = {
+        "major": "major",
+        "natural_minor": "minor",
+        "harmonic_minor": "harmonic-minor",
+        "melodic_minor": "melodic-minor"
+    }
+    return modes[mode]
+
+def slug_scale(scale):
+    return f"{slug_note(scale.root)}-{slug_mode(scale.name)}"
+
 # Draw the key corresponding to a note
 def draw_key(
     drawing,
@@ -470,35 +505,121 @@ def draw_keyboard(
         key_group = white_key_group if is_white_key(note) else black_key_group
         key_group.add(key)
 
-    text_x = x_offset + (7 * octaves * WHITE_KEY_WIDTH) / 2.0
-    text_y = y_offset + WHITE_KEY_HEIGHT
-    scale_notes = list(map(lambda t: t[0], label_notes))
-    text = draw_scale_notes(drawing, scale_notes, (text_x, text_y))
-    group.add(text)
+    # text_x = x_offset + (7 * octaves * WHITE_KEY_WIDTH) / 2.0
+    # text_y = y_offset + WHITE_KEY_HEIGHT
+    # scale_notes = list(map(lambda t: t[0], label_notes))
+    # text = draw_scale_notes(drawing, scale_notes, (text_x, text_y))
+    # group.add(text)
     return group
 
-def main(path):
-    scale_width = 14 * WHITE_KEY_WIDTH + 30
-    scale_height = WHITE_KEY_HEIGHT + 30
-    width=len(MODES) * scale_width
-    height=len(ROOTS) * scale_height
-    drawing = svgwrite.Drawing(path, profile="full", size=(width, height))
-    drawing.embed_stylesheet(STYLE)
-    for i, mode in enumerate(MODES):
-        for j, root in enumerate(ROOTS):
-            scale = Scale(root, mode)
-            if root in SCALES and mode in SCALES[root]:
-                right_fingers, left_fingers = SCALES[root][mode]
-                labeled_notes=list(zip(scale, right_fingers, left_fingers))
-                group = draw_keyboard(
-                    drawing,
-                    octaves=2,
-                    label_notes=labeled_notes,
-                    x_offset=i * scale_width,
-                    y_offset=j * scale_height,
-                )
-                drawing.add(group)
-    drawing.save()
+def main(base_path):
+    doc, tag, text, line = Doc().ttl()
+    doc.asis("<!DOCTYPE html>")
+    width = 14 * WHITE_KEY_WIDTH
+    height = WHITE_KEY_HEIGHT
+    with tag("html"):
+        with tag("head"):
+            with tag("title"):
+                text("Piano Scales")
+            doc.stag(
+                "link", 
+                rel="stylesheet",
+                href="style.css"
+            )
+            doc.stag(
+                "link", 
+                rel="stylesheet",
+                href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css",
+                integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu",
+                crossorigin="anonymous"
+            )
+            doc.stag(
+                "meta",
+                name="viewport",
+                content="width=device-width, initial-scale=1"
+            )
+            with tag(
+                "script",
+                src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js",
+                integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=",
+                crossorigin="anonymous"
+            ):
+                pass
+            with tag(
+                "script",
+                src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js",
+                integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd",
+                crossorigin="anonymous"
+            ):
+                pass
+        with tag("body"):
+            with tag("div", klass="container"):
+                with tag("header"):
+                    with tag("h1"):
+                        text("Piano Scales")
+                with tag("nav"):
+                    with tag("ul", klass="nav nav-pills"):
+                        for mode in MODES:
+                            with tag("li", klass="dropdown", role="presentation"):
+                                with tag(
+                                    "a",
+                                    ("data-target", "#"),
+                                    ("data-toggle", "dropdown"),
+                                    ("aria-haspopup", "true"),
+                                    ("aria-expanded", "false"),
+                                    klass="dropdown-toggle",
+                                    role="button",
+                                ):
+                                    text(pretty_print_mode(mode))
+                                    text(" ")
+                                    with tag("span", klass="caret"):
+                                        pass
+                                with tag("ul", klass="dropdown-menu"):
+                                    for root in ROOTS:
+                                        scale = Scale(root, mode)
+                                        with tag("li"):
+                                            with tag("a", href=f"#{slug_scale(scale)}"):
+                                                text(pretty_print_scale(scale))
+                for i, mode in enumerate(MODES):
+                    with tag("section", id=slug_mode(mode)):
+                        with tag("h2"):
+                            text(pretty_print_mode(mode))
+                        mode_path = os.path.join(base_path, mode)
+                        os.makedirs(mode_path, exist_ok=True)
+                        for j, root in enumerate(ROOTS):
+                            path = os.path.join(mode_path, f"{root}.svg")
+                            drawing = svgwrite.Drawing(path, profile="full", size=(width, height))
+                            drawing.embed_stylesheet(STYLE)
+                            if root in SCALES and mode in SCALES[root]:
+                                scale = Scale(root, mode)
+                                notes = scale[:8]
+                                with tag("section", klass="scale", id=slug_scale(scale)):
+                                    with tag("h3"):
+                                        text(pretty_print_scale(scale))
+                                    with tag("div", klass="contents"):
+                                        doc.stag("img", klass="keyboard", src=urllib.parse.quote(path))
+                                        with tag("div", klass="notes"):
+                                            with tag("div"):
+                                                if len(notes) > 0:
+                                                    with tag("span", klass="note"):
+                                                        text(pretty_print_note(notes[0]))
+                                                for note in notes[1:]:
+                                                    with tag("span", klass="separator"):
+                                                        text(" • ")
+                                                    with tag("span", klass="note"):
+                                                        text(pretty_print_note(note))
+                                equivalent = ROOT_ENHARMONIC_EQUIVALENTS.get(root, root)
+                                right_fingers, left_fingers = SCALES[equivalent][mode]
+                                labeled_notes=list(zip(notes, right_fingers, left_fingers))
+                                group = draw_keyboard(
+                                    drawing,
+                                    octaves=2,
+                                    label_notes=labeled_notes,
+                                )
+                                drawing.add(group)
+                            drawing.save()
+    with open("output.html", "w") as f:
+        f.write(indent(doc.getvalue()))
 
 if __name__ == "__main__":
-    main("output.svg")
+    main("output")
