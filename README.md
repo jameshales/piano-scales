@@ -27,4 +27,4 @@ pip install -r requirements.txt
 python generate_scales.py
 ```
 
-Output is written to `output.html`.
+Output is written to [`output.html`](https://htmlpreview.github.io/?https://raw.githubusercontent.com/jameshales/piano-scales/main/output.html).
